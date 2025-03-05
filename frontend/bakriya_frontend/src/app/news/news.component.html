@@ -1,0 +1,25 @@
+<p>news works!</p>
+
+<form [formGroup]="newsForm" (ngSubmit)="submitNews()">
+
+    <label>Title</label>
+    <input type="text" formControlName="title" required>
+
+    <label>Date</label>
+    <input type="date" formControlName="date" required>
+
+    <label>Location</label>
+    <input type="text" formControlName="location" required>
+
+
+    <label>Description</label>
+    <input type="text" formControlName="description" required>
+
+    <label>Content</label>
+    <input type="text" formControlName="content" required>
+
+    <label>Image</label>
+    <input type="file" (change)="onFileChange($event)">
+
+    <button type="submit">Submit</button>
+</form>

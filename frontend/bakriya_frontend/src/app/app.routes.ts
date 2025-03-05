@@ -1,3 +1,25 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { NewsComponent } from './news/news.component';
 
-export const routes: Routes = [];
+
+
+
+
+export const routes: Routes = [
+
+    { path: 'news', component: NewsComponent }, 
+
+];
+
+
+
+
+
+
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
